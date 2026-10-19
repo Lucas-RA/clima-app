@@ -22,7 +22,7 @@ fun ClimaNavHost(innerPadding: PaddingValues) {
         startDestination = Screen.Search.route,
         modifier = Modifier.padding(innerPadding)
     ) {
-        c composable(Screen.Search.route) {
+        composable(Screen.Search.route) {
             SearchScreen(
                 onCityClick = { city ->
                     navController.navigate(
