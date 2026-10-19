@@ -28,8 +28,8 @@ object NotificationHelper {
         }
     }
 
-    fun notifyIfThresholdCrossed(context: Context, city: City, temperature: Double) {
-        if (temperature < THRESHOLD_CELSIUS) return
+    fun notifyIfThresholdCrossed(context: Context, city: City, temperature: Double, thresholdCelsius: Float) {
+        if (temperature < thresholdCelsius) return
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             val granted = ActivityCompat.checkSelfPermission(
